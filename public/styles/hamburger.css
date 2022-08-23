@@ -1,0 +1,63 @@
+.hamburger{
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  display: none;
+}
+
+.hamburger span{
+  width: 100%;
+  height: 3px;
+  background-color:snow;
+}
+#side-drawer{
+  width: 100%;
+  height: 100%;
+  background-color: rgb(58, 49, 97);
+  display: none;
+  position: fixed;
+  top:  0;
+  left: 0;
+
+}
+#side-drawer:target{
+  display: block;
+}
+
+#side-drawer header{
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 4%;
+}
+#side-drawer a{
+  color: rgb(253, 239, 213);
+  color: snow;
+  font-size: 2rem;
+}
+
+#side-drawer li{
+  margin: 1rem 0;
+}
+
+#side-drawer ul{
+  margin:0;
+  padding: 5rem 2rem;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+
+@media (max-width: 48rem){
+  .hamburger{
+    display: flex;
+  }
+  #side-drawer header{
+    padding-right: 2.5rem;
+    padding-top: 4rem;
+  }
+}

@@ -1,0 +1,142 @@
+*{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: azure;
+  background-color: snow;
+  font-family: 'Montserrat', sans-serif;
+}
+h1{
+  font-family: 'Open Sans', sans-serif;
+  font-family: fantasy;
+  font-size: 2.5rem;
+  color: rgb(58, 49, 97);
+  margin: 3rem 0;
+}
+main {
+  width: 80%;
+  min-height: 500px;
+  margin: 5rem auto;
+  text-align: center;
+  //border: 1px solid forestgreen;
+}
+a {
+  text-decoration: none;
+  color: snow;
+}
+a:hover{
+  text-decoration: underline;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.btn {
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.5rem;
+  background-color: rgb(90, 0, 255);
+  border: 1px solid rgb(90, 0, 255);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: rgb(70, 5, 195);
+  border-color: rgb(70, 5, 195);
+  color: white;
+}
+
+.btn.btn-alt {
+  background-color: transparent; 
+  border-color: transparent;
+  color:rgb(90, 0, 255);
+}
+
+.btn.btn-alt:hover,
+.btn.btn-alt:active {
+  color: rgb(116, 98, 194);
+  font-weight: 900;
+}
+
+#header {
+  padding: 2rem 1rem;
+  padding: 2rem 10%;
+  background-color: rgb(58, 49, 97);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo a {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: snow;
+}
+
+#header ul {
+  display: flex;
+}
+
+#header li {
+  margin-left: 2rem;
+  font-size: 1.42rem;
+}
+
+#logo img{
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 42px;
+}
+
+footer{
+  width: 100%;
+  padding: 40px;
+  color: snow;
+  background-color: rgb(58, 49, 97);
+}
+footer ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+footer li{
+  margin: 0 15px;
+  font-size: 2.4rem;
+}
+
+.port{
+  margin: 1rem auto;
+  font-size: 1.2rem;
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+@media (max-width: 48rem){
+  
+  .hamburger{
+    display: flex;
+  }
+  main h1{
+    font-size: 1.5rem;
+  }
+   #header nav  {
+    display: none;
+  }
+  #side-drawer header{
+    padding-right: 2.5rem;
+    padding-top: 4rem;
+  }
+  footer{
+    position: static;
+  }
+}

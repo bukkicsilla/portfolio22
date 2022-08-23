@@ -1,0 +1,47 @@
+<head>
+  <%- include('include/head', { title: 'New Projects' }) %>
+</head>
+
+<body>
+  <%- include('include/header') %>
+  <%- include('include/responsive') %>
+  <main>
+    <section id="frontend-apps">
+      <h1>Frontend Projects</h1>
+       <ul>
+         <% for (const app of apps) { %>
+           <% if (app.frontend) { %>
+          <li class="new-item"> 
+            <article>
+              <a href="/new-projects/<%= app._id%>">
+            <img src="<%= app.path %>"/> </a>
+              <h2><%= app.name %>  </h2>
+            </article>
+            </li>
+          <% } %>
+          <% } %>
+       </ul>
+        </section>
+        <section id="fullstack-apps">
+          <h1>Full Stack Projects</h1>
+            <ul>
+         <% for (const app of apps) { %>
+           <% if (!app.frontend) { %>
+          <li class="new-item"> 
+            <article>
+              <a href="/new-projects/<%= app._id%>">
+            <img src="<%= app.path %>"/></a>
+              <h2><%= app.name %>  </h2>
+            </article>
+            </li>
+          <% } %>
+          <% } %>
+       </ul>
+
+          
+        </section>
+  </main>
+  <%- include('include/footer') %>
+</body>
+
+</html>

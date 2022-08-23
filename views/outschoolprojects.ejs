@@ -1,0 +1,46 @@
+<head>
+  <%- include('include/head', { title: 'Outschool Projects' }) %>
+    <link href="/styles/outschool.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <%- include('include/header') %>
+  <%- include('include/responsive') %>
+  <main>
+    <section id="python" class="pjs">
+      <h1> Python Projects</h1>
+      <ul>
+         <% for (const app of apps) { %>
+           <% if (app.python) { %>
+          <li class="new-item"> 
+            <article>
+              <a href="/outschool-projects/<%= app._id%>">
+            <img src="<%= app.path %>" alt="coming soon"/> </a>
+              <h2><%= app.name %>  </h2>
+            </article>
+            </li>
+          <% } %>
+          <% } %>
+       </ul>
+    </section>
+    <section id="js" class="pjs">
+      <h1> JavaScript Project</h1>
+      <ul>
+         <% for (const app of apps) { %>
+           <% if (!app.python) { %>
+          <li class="new-item"> 
+            <article>
+              <a href="/outschool-projects/<%= app._id%>">
+            <img src="<%= app.path %>"/></a>
+              <h2><%= app.name %>  </h2>
+            </article>
+            </li>
+          <% } %>
+          <% } %>
+       </ul>
+    </section>
+  </main>
+  <%- include('include/footer') %>
+</body>
+
+</html>

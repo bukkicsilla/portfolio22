@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('include/head', { title: 'Details' }) %>
+  <link href="/styles/outschool.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <%- include('include/header') %>
+    <%- include('include/responsive') %>
+  <main id="project-detail">
+    <section id="project">
+    <h1> <%= project.name %> </h1>
+    <img src="<%= project.path %>" alt="coming soon"/>
+    </section>
+    <section id="summary">
+          <a href="<%= project.url %>" target="_blank">  Project on Outschool </a>
+    </section>
+    <hr>
+    <section id="outschoolimages">
+      <button id="load-images" class="btn btn-alt" data-outschoolid="<%=project._id%>">Load Images</button>
+    </section>
+  </main>
+      <%- include('include/footer') %>
+    <script src="/scripts/outschooldetails.js"></script>
+</body>
+
+</html>

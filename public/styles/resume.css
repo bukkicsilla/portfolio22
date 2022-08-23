@@ -1,0 +1,7 @@
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+#fullname{
+   margin-left: 1rem;
+}
+.w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:rgba(132,171,240, 0.3)!important}
+.w3-text-teal,.w3-hover-text-teal:hover{color:rgb(58, 49, 97)!important}
+.w3-teal,.w3-hover-teal:hover{color:#fff!important;background-color:rgb(58, 49, 97)!important}

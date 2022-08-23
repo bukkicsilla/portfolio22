@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('include/head', { title: 'Project' }) %>
+</head>
+
+<body>
+    <%- include('include/header') %>
+    <%- include('include/responsive') %>
+  <main id="project-detail">
+    <section id="project">
+    <h1><%= project.name %></h1>
+      <a href="<%= project.url %>" target="_blank">
+    <img src="<%= project.path %>" alt="coming"/></a>
+    </section>
+    <section id="summary">
+        <p> <%= project.summary %> </p>
+          <a href="<%= project.github %>" target="_blank">
+          <span class="fa fa-github"></span> </a>
+         
+    </section>
+    <hr>
+    <section id="facts">
+      <!--<p>
+          You can see the fatcs.
+        </p>-->
+        <button id="load-facts" class="btn btn-alt" data-appid="<%=project._id%>">Load Facts</button>
+    </section>
+  </main>
+      <%- include('include/footer') %>
+    <script src="/scripts/details.js"></script>
+</body>
+
+</html>
